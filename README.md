@@ -27,4 +27,4 @@ Markers are pieces of text you can add anywhere on your map to signify an import
 ### Google Play Store
 uploading soon...
 ### APK
- ---
+https://github.com/RooRoo6080/Trailblazer-AndroidHikingTracker/releases/tag/publish

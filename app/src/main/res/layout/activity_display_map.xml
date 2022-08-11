@@ -119,7 +119,6 @@
         android:id="@+id/tiv_map"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:rotation="-90"
         android:contentDescription="@string/map"
         app:layout_constraintBottom_toTopOf="@+id/back_button"
         app:layout_constraintDimensionRatio="1:1"

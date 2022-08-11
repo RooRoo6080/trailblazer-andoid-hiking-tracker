@@ -223,8 +223,8 @@ public class DisplayMap extends AppCompatActivity implements SensorEventListener
             System.out.println("[" + stepCount + ", " + tv_direction.getText() + "]");
             System.out.println("X-START: " + x);
             System.out.println("Y-START: " + y);
-            int newX = (int) (x + (3 * Math.cos(Math.toRadians(dir))));
-            int newY = (int) (y + (3 * Math.sin(Math.toRadians(dir))));
+            int newX = (int) (x + (3 * Math.cos(Math.toRadians(dir - 90))));
+            int newY = (int) (y + (3 * Math.sin(Math.toRadians(dir - 90))));
             System.out.println("X-END: " + x);
             System.out.println("Y-END: " + y);
             drawMap(findViewById(R.id.tiv_map), x, y, newX, newY);

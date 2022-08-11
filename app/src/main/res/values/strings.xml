@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Trailblazer</string>
+    <string name="_0">0</string>
+    <string name="steps">Steps</string>
+    <string name="direction">Direction</string>
+    <string name="start">START</string>
+    <string name="start_tracking">START TRACKING</string>
+    <string name="start_button">START TRACKING</string>
+    <string name="stop">STOP</string>
+    <string name="elapsed_time">Elapsed Time</string>
+    <string name="mapdisplay">MapDisplay</string>
+    <string name="_180">-180</string>
+    <string name="_100">100</string>
+    <string name="map">Map</string>
+    <string name="pause">PAUSE</string>
+    <string name="add_a_location">add a location</string>
+    <string name="e">E</string>
+    <string name="n">N</string>
+    <string name="s">S</string>
+    <string name="w">W</string>
+    <string name="direction_arrow">Direction Arrow</string>
+    <string name="compass">compass</string>
+</resources>

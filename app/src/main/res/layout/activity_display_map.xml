@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".DisplayMap">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="75dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/steps"
+        android:textAlignment="center"
+        android:textColor="#b8b8b8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_info_direction"
+        android:layout_width="88dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/direction"
+        android:textAlignment="center"
+        android:textColor="#b8b8b8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="584dp"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_direction"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_steps"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_info"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_steps"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="584dp"
+        android:text="@string/_100"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="#b8b8b8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_direction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="584dp"
+        android:text="@string/_180"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="#b8b8b8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info_direction"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/pause_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#1E88E5"
+        android:onClick="onPause"
+        android:text="@string/pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/add_location_button" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#1E88E5"
+        android:onClick="onClick"
+        android:text="@string/stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_location_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_time_info"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/elapsed_time"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toStartOf="@+id/tv_info_direction"
+        app:layout_constraintStart_toEndOf="@+id/tv_info"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ortiz.touchview.TouchImageView
+        android:id="@+id/tiv_map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:rotation="-90"
+        android:contentDescription="@string/map"
+        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+    <ImageButton
+        android:id="@+id/add_location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#1E88E5"
+        android:contentDescription="@string/add_a_location"
+        android:onClick="addLocation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pause_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:srcCompat="@drawable/ic_addlocation" />
+
+    <ImageView
+        android:id="@+id/direction_arrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/tiv_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_pointer"
+        android:contentDescription="@string/direction_arrow" />
+
+    <ImageView
+        android:id="@+id/compass"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/tiv_map"
+        app:layout_constraintEnd_toEndOf="@+id/direction_arrow"
+        app:layout_constraintStart_toStartOf="@+id/direction_arrow"
+        app:layout_constraintTop_toTopOf="@+id/direction_arrow"
+        app:srcCompat="@drawable/ic_compass"
+        android:contentDescription="@string/compass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

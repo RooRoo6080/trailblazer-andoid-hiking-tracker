@@ -1,7 +1,7 @@
 # Trailblazer - Android Hiking Tracker
 ## An Android app that tracks your phone without using GPS.
 -----
-### This app uses you phone's built-in pedometer and gyroscope to map where you traveled. *All data is stored locally on your device.*
+### This app uses your phone's built-in pedometer and gyroscope to map where you traveled. *All data is stored locally on your device.*
 
 Thousands of people go missing in the woods every year. Trailblazer will help guide you back to safety in such a scenario.
 Once started, it will track your phone's location using no external factors (such as GPS). This means that Trailblazer has you covered, wherever you go.
